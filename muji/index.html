@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>無印良品
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./js/main.js"></script>
+  
+  </head>
+</head>
+
+
+<body>
+  <!-- ============================full-screen nav bar *****************************************-->
+
+    <div class="nav-expand full-screen" id="navbarToggleExpand"> 
+      <div>
+        <div class="cancel move-right" onclick="closeNavToggler()"></div>
+      </div>
+      
+      <ul>
+        <li class="home"><a class="white-color move-down" href="/tw/">首頁</a></li>
+        <li><a class="white-color" href="https://www.muji.com/tw/products/">商品情報</a></li>
+        <li><a class="white-color" href="https://www.muji.com/tw/events/">門市活動</a></li>
+        <li><a class="white-color" href="https://www.muji.com/tw/aboutus/">企業情報</a></li>
+        <li><a class="white-color" href="https://frommuji.muji.tw/column/">良品生活研究所</a></li>
+        <li><a class="white-color" href="https://www.muji.com/tw/business/">大宗採購</a></li>
+        <li><a class="white-color" href="https://www.muji.com/tw/shop_develop/">展店合作</a></li>
+        <li><a class="white-color" href="https://consumerservice.muji.tw/">顧客服務</a></li>
+        <li><a class="white-color" href="https://www.muji.com/storelocator/?c=tw">店鋪情報</a></li>
+        <li><a class="white-color" href="https://www.muji.com/tw/news/">最新消息</a></li>
+        <li><a class="white-color" href="https://renovation.muji.tw/">空間改造企劃服務</a></li>
+      </ul>
+    </div>
+  <div class="container">
+
+    <!-- add boostrap navbar -->
+    <nav class="navbar navbar-expand-xl navbar-light section">
+      <div class="container-fluid">
+        <div class="button-class">
+          <button id="toggler-border-none" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+            aria-label="Toggle navigation" onclick="hideNavCollapse()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div class='topnav-logo-box'>
+
+        <a class="navbar-brand" href="https://www.muji.com/tw/"><img id="logo"
+            src='https://www.muji.com/img/logo_muji_b.png'></a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 topnav-font-size">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">商品情報</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">門市活動</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">企業情報</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">良品生活研究所</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">大宗採購</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#"> 展店合作</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">顧客服務</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">店舖情報</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">最新消息</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">空間改造企劃服務</a>
+            </li>
+          </ul>
+          <!-- ***********************FULL SCREEN SEARCH BOX******************************* -->
+        </div>
+        <div class="search-box">
+
+          <input type="search" id="hSearch-input-new" placeholder="請輸入關鍵字">
+        </div>
+
+        <div id="myOverlay" class="overlay">
+          <button class="clsebtn" onclick="closeSearch()" title="Close Overlay" id="hSearch-closebtn2">
+            <img src="https://www.muji.com/img/icon_close.png">
+          </button>
+         
+          <div class="overlay-content" id="move_searhcbox_up">
+            <form action="/action_page.php" class="hSearch-form">
+              
+              <input id="hSearch-input" type="text" placeholder="請輸入關鍵字" name="search" style="background-color: transparent;">
+              <button type="submit" style="background-color:transparent;"></button>><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <button class="btn-search-block" onclick="openSearch()"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+            height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+
+    </nav>
+    <!-- ***************************************************************************************** -->
+
+    <div class="row justify-content-md-center reminderbar">
+      <div class="col-12 style-reminder-bar">
+        
+        <div class="reminderbar-style">
+          <div id="warm-reminder">貼心提醒</div>
+          <a id="reminder-left">．仿冒品提醒聲明</a>
+        </div>
+      </div>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner section">
+        <div class="carousel-item active">
+          <img src="https://www.muji.com/tw/img/panel/main/1024X640-220127.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.muji.com/tw/img/panel/main/1024X640-211116-3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.muji.com/tw/img/panel/main/1024X640-211116-4.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-md-3 col-sm-6 col-6 section">
+        <a href="http://www.muji.com/tw/feature/polypropylene-storage/index.html"><img class="img-fluid"
+            src="image/image1.jpg"></a>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6 section">
+        <a href="https://www.muji.com/tw/feature/down/21aw/"><img class="img-fluid" src="image/image2.jpg"></a>
+        <h1 class="picture-word">輕量羽絨服</h1>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6 section">
+        <a href="https://hotel.muji.com/shenzhen/ja/"><img class="img-fluid" src="image/image3.jpg"></a>
+        <h1 class="picture-word">保暖的天然素材</h1>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6 section">
+        <a href="http://www.muji.com/tw/events/"><img class="img-fluid" src="image/image4.jpg"></a>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-3 col-sm-6 col-6 section">
+        <a><img class="img-fluid" src="image/image5.jpg"></a>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6 section">
+        <img class="img-fluid" src="image/image6.jpg">
+      </div>
+      <div class="col-md-3 col-sm-6 col-6 section">
+        <img class="img-fluid" src="image/image7.jpg">
+
+      </div>
+      <div class="col-md-3 col-sm-6 col-6 section">
+        <img class="img-fluid" src="image/image8.jpg">
+
+      </div>
+
+    </div>
+
+
+    <!-- the 1*3 rows of pictures -->
+    <div class="row justify-content-md-center">
+      <div class="col-sm-12 see-more topmargin">
+        <h1>3A生活提案</h1>
+        <a class="link-to-more-activity no-color">活動特輯 ></a>
+      </div>
+      <div class="col-md-4 col-sm-12 section">
+        <a href=''><img class="img-fluid" src='image/3apic1.jpeg'></a>
+        <h1 class="picture-word">styling advisor 穿撘圖集</h1>
+      </div>
+      <div class="col-md-4 col-sm-12 section">
+        <a href=''><img class="img-fluid" src='image/3apic2.jpeg'></a>
+        <h1 class="picture-word">Interior Advisor 生活案例</h1>
+      </div>
+      <div class="col-md-4 col-sm-12 section">
+        <a href=''><img class="img-fluid" src='image/3apic3.jpeg'></a>
+        <h1 class="picture-word">創意料理</h1>
+      </div>
+    </div>
+
+    <!-- the map -->
+    <div class="row">
+      <div class="col-12 see-more section">
+        <h1>店舖情報</h1>
+        <a class="no-color">店舖一覽 ></a>
+      </div>
+      <!-- draw the map -->
+      <div class="col-12">
+        <div>
+        </div class="section">
+        <iframe id="map"
+          src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d7229.148964217953!2d121.54526392513755!3d25.048510785862007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d25.042694599999997!2d121.5465337!4m5!1s0x3442abe7fd31edab%3A0xb6bee820f846df02!2sMUJI%20Breeze%20Nanjing%20Store%2C%20No.%20337%E8%99%9F%2C%20Section%203%2C%20Nanjing%20E%20Rd%2C%20Songshan%20District%2C%20Taipei%20City%2C%20105!3m2!1d25.0519794!2d121.5477782!5e0!3m2!1sen!2stw!4v1644565076990!5m2!1sen!2stw"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <!-- end of map -->
+    </div>
+    <div class="row justify-content:left section topmargin">
+      <div class="col-12 bottomnews ">
+        <div class="bottomrow-news see-more">
+          <b class="style-news">最新消息
+          </b>
+          <a>看更多 ></a>
+        </div>
+        <p>2022-02-10<br>
+          <a class="gray-color" href="">MUJI無印良品情人節贈禮提案</a><br>
+          2022-01-25<br>
+          <a class="gray-color" href="#">最新公告 2022春節服務時間</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+
+    <div class="upperfooter-gray">
+
+    </div>
+    <div class="foot2">
+      <div class="container">
+        <div class="row">
+          <ul class="footerpart">
+            <li>
+              <a href="#">商品情報</a>
+            </li>
+            <li>
+              <a href="'#">店舖情報</a>
+            </li>
+            <li>
+              <a href="'#">會員服務</a>
+            </li>
+            <li>
+              <a href="'#">FB粉絲團</a>
+            </li>
+            <li>
+              <a href="'#">LINE</a>
+            </li>
+            <li>
+              <a href="'#">門市活動</a>
+            </li>
+            <li>
+              <a href="'#">良品生活研究所</a>
+            </li>
+          </ul>
+          <ul class="footerpart">
+            <li>
+              <a href="#">商品情報</a>
+            </li>
+            <li>
+              <a href="'#">店舖情報</a>
+            </li>
+            <li>
+              <a href="'#">會員服務</a>
+            </li>
+            <li>
+              <a href="'#">FB粉絲團</a>
+            </li>
+            <li>
+              <a href="'#">LINE</a>
+            </li>
+            <li>
+              <a href="'#">門市活動</a>
+            </li>
+            <li>
+              <a href="'#">良品生活研究所</a>
+            </li>
+          </ul>
+          <ul class="footerpart">
+            <li>
+              <a href="#">商品情報</a>
+            </li>
+            <li>
+              <a href="'#">店舖情報</a>
+            </li>
+            <li>
+              <a href="'#">會員服務</a>
+            </li>
+            <li>
+              <a href="'#">FB粉絲團</a>
+            </li>
+            <li>
+              <a href="'#">LINE</a>
+            </li>
+            <li>
+              <a href="'#">門市活動</a>
+            </li>
+            <li>
+              <a href="'#">良品生活研究所</a>
+            </li>
+          </ul>
+          <ul class="footerpart">
+            <li>
+              <p>Copyright &copy; 2022 by Sharon</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+
+  <script>
+
+    function closeSearch() {
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Get the size of the device screen
+    var screenWidth = screen.width;
+    var screenHeight = screen.height;
+
+    // Get the browser window size
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+
+    // Get the size of the entire webpage
+    const pageWidth = document.documentElement.scrollWidth;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    //decide whether the screen is large or small
+    function openSearch() {
+
+      // document.getElementById("demo").innerHTML = 
+      // "page width is " + pageWidth;
+      document.getElementById("myOverlay").style.display = "block";
+    
+
+    }
+   
+    function hideNavCollapse() {
+      document.getElementById("navbarTogglerDemo03").style.display = "none";
+      document.getElementById("navbarToggleExpand").style.display = "block";
+    }
+
+    function closeNavToggler(){
+      document.getElementById("navbarToggleExpand").style.display = "none";
+    }
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
