@@ -1,0 +1,50 @@
+body {color:#333; font-size: 14px; line-height:1.5; font-family:"MUJIFont-Light","Helvetica", "Lucida Grande", "Microsoft JhengHei", sans-serif;}
+
+@font-face {
+  font-family: "MUJIFont-Bold";
+  src: url("https://www.muji.com/tw/fonts/MUJIFont-Bold.eot"); /* IE9 Compat Modes */
+  src: url("https://www.muji.com/tw/fonts/MUJIFont-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Bold.otf") format("opentype"), /* Open Type Font */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Bold.svg") format("svg"), /* Legacy iOS */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Bold.woff") format("woff"), /* Modern Browsers */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Bold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+ } 
+@font-face {
+  font-family: "MUJIFont-Heavy";
+  src: url("https://www.muji.com/tw/fonts/MUJIFont-Heavy.eot"); /* IE9 Compat Modes */
+  src: url("https://www.muji.com/tw/fonts/MUJIFont-Heavy.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Heavy.otf") format("opentype"), /* Open Type Font */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Heavy.svg") format("svg"), /* Legacy iOS */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Heavy.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Heavy.woff") format("woff"), /* Modern Browsers */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Heavy.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MUJIFont-Light";
+  src: url("https://www.muji.com/tw/fonts/MUJIFont-Light.eot"); /* IE9 Compat Modes */
+  src: url("https://www.muji.com/tw/fonts/MUJIFont-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Light.otf") format("opentype"), /* Open Type Font */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Light.svg") format("svg"), /* Legacy iOS */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Light.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Light.woff") format("woff"), /* Modern Browsers */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Light.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+    }
+@font-face {
+  font-family: "MUJIFont-Regular";
+  src: url("https://www.muji.com/tw/fonts/MUJIFont-Regular.eot"); /* IE9 Compat Modes */
+  src: url("https://www.muji.com/tw/fonts/MUJIFont-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Regular.otf") format("opentype"), /* Open Type Font */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Regular.svg") format("svg"), /* Legacy iOS */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Regular.woff") format("woff"), /* Modern Browsers */
+    url("https://www.muji.com/tw/fonts/MUJIFont-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
